@@ -24,40 +24,24 @@ To run this application locally, follow the instructions below to set up the bac
 
 Backend Setup
 Clone the repository to your local machine:
-bash
-Copy code
-git clone <repository_url>
-cd <repository_name>
+git clone <[repository_url](https://github.com/Mohameddaif123/pets-store)>
+cd <pets-store>
 Create a virtual environment and activate it:
-bash
-Copy code
 virtualenv venv
 source venv/bin/activate
 Install the required Python packages:
-bash
-Copy code
 pip install -r requirements.txt
 Apply the migrations and create a superuser:
-bash
-Copy code
 python manage.py migrate
 python manage.py createsuperuser
 Start the Django development server:
-bash
-Copy code
 python manage.py runserver
 Frontend Setup
 Navigate to the frontend directory:
-bash
-Copy code
-cd frontend
+cd my-app
 Install the required Node.js packages:
-bash
-Copy code
 npm install
 Start the React development server:
-bash
-Copy code
 npm start
 Usage
 Once both the backend and frontend servers are running, you can access the application by navigating to http://localhost:3000 in your web browser. From there, you can:
@@ -107,6 +91,8 @@ Username: hadi
 Password: 123
 Admin/superuser will see more buttons and will be able to perform actions like updating, removing, and adding new products that other users cannot do.
 
+Live server
+-https://fluffyfreinds-store.onrender.com
+
 License
 This project is licensed under the MIT License. Feel free to modify and distribute the code for your own purposes.
-
