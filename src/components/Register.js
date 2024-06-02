@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { registerAsync } from './loginSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AdSense from './AdSense';
 import {
     Box,
     Button,
@@ -153,10 +152,6 @@ const Register = () => {
                         </Typography>
                     </Box>
                 </Box>
-                {/* AdSense Advertisement */}
-               <Box sx={{ mt: 4 }}>
-    <AdSense client='ca-pub-4481504048762478' slot='3937695569' />
-</Box>
 
                 <ToastContainer />
             </Container>
