@@ -1,0 +1,28 @@
+/* styles.css */
+.link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    display: inline-block;
+}
+
+.link:hover {
+    color: #000;
+    border-color: #ccc;
+    transform: scale(1.05);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.card-content {
+    flex-grow: 1;
+}

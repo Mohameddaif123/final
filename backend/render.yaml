@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: my-django-backend
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
+    startCommand: gunicorn myproj.wsgi --log-file -
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: 'django-insecure-1z_-13ozff$nu3z#sk_itwyjt87*(2m^02emg2wkx($y1r7#np'
+      - key: DJANGO_DEBUG
+        value: 'True'
+      - key: EMAIL_HOST_USER
+        value: 'djangotest1222@gmail.com'
+      - key: EMAIL_HOST_PASSWORD
+        value: 'yyyg vjgr hnjw xsrq'
+      # Add other environment variables as needed
+    staticPublishPath: staticfiles
