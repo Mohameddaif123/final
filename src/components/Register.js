@@ -156,8 +156,6 @@ const Register = () => {
                 {/* AdSense Advertisement */}
                 <Box sx={{ mt: 4 }}>
                     <AdSense
-                        client="ca-pub-4481504048762478"
-                        slot='3937695569'
                     />
                 </Box>
                 <ToastContainer />
