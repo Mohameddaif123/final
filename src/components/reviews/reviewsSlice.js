@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Async thunk to fetch reviews
 export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async () => {
-    const response = await axios.get('http://localhost:8000/api/reviews/');
+    const response = await axios.get('https://cats-dogs-petstore.onrender.com/api/reviews/');
     return response.data;
 });
 
