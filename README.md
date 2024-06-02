@@ -120,9 +120,11 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 - **Password**: 123
 
 Admin/superuser will see more buttons and will be able to perform actions like updating, removing, and adding new products that other users cannot do.
+in the login page admin will be able to access reviews page that display informations about the website and also have access to page where admin can send mails to
+specific user or email for all the users togother.
 
 ## Live server
--https://fluffyfreinds-store.onrender.com
+- https://tail-wagging-treasures.onrender.com
 
 ## License
 
