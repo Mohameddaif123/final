@@ -78,86 +78,87 @@ const Register = () => {
     };
 
     return (
-        <ThemeProvider theme={petTheme}>
-            <Container component="main" maxWidth="xs">
-                <CssBaseline />
-                <Box
-                    sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        mt: 8,
-                        bgcolor: 'background.default',
-                        color: 'text.primary',
-                        p: 3,
-                        borderRadius: 2,
-                        boxShadow: 3,
-                    }}
-                >
-                    <PetsIcon fontSize="large" sx={{ mb: 2, color: 'secondary.main' }} />
-                    <Typography component="h1" variant="h5">
-                        Sign up for free
-                    </Typography>
-                    <Box component="form" sx={{ mt: 1 }}>
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="username"
-                            label="Username"
-                            name="username"
-                            autoComplete="username"
-                            autoFocus
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                            InputLabelProps={{ style: { color: 'secondary.main' } }}
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            InputLabelProps={{ style: { color: 'secondary.main' } }}
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            InputLabelProps={{ style: { color: 'secondary.main' } }}
-                        />
-                        <Button
-                            type="button"
-                            fullWidth
-                            variant="contained"
-                            color="primary"
-                            sx={{ mt: 3, mb: 2 }}
-                            onClick={handleRegister}
-                            disabled={isLoading}
-                        >
-                            {isLoading ? <CircularProgress size={24} /> : 'Sign up'}
-                        </Button>
-                        <Typography variant="body2" color="textSecondary" align="center">
-                            By clicking Sign up, you agree to the terms of use.
+        <>
+            <ThemeProvider theme={petTheme}>
+                <Container component="main" maxWidth="xs">
+                    <CssBaseline />
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            mt: 8,
+                            bgcolor: 'background.default',
+                            color: 'text.primary',
+                            p: 3,
+                            borderRadius: 2,
+                            boxShadow: 3,
+                        }}
+                    >
+                        <PetsIcon fontSize="large" sx={{ mb: 2, color: 'secondary.main' }} />
+                        <Typography component="h1" variant="h5">
+                            Sign up for free
                         </Typography>
+                        <Box component="form" sx={{ mt: 1 }}>
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="username"
+                                label="Username"
+                                name="username"
+                                autoComplete="username"
+                                autoFocus
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                InputLabelProps={{ style: { color: 'secondary.main' } }}
+                            />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                InputLabelProps={{ style: { color: 'secondary.main' } }}
+                            />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                InputLabelProps={{ style: { color: 'secondary.main' } }}
+                            />
+                            <Button
+                                type="button"
+                                fullWidth
+                                variant="contained"
+                                color="primary"
+                                sx={{ mt: 3, mb: 2 }}
+                                onClick={handleRegister}
+                                disabled={isLoading}
+                            >
+                                {isLoading ? <CircularProgress size={24} /> : 'Sign up'}
+                            </Button>
+                            <Typography variant="body2" color="textSecondary" align="center">
+                                By clicking Sign up, you agree to the terms of use.
+                            </Typography>
+                        </Box>
                     </Box>
-                </Box>
-
-                <ToastContainer />
-            </Container>
-        </ThemeProvider>
-<AdSense client="ca-pub-4481504048762478" slot="3937695569" />
+                    <ToastContainer />
+                </Container>
+            </ThemeProvider>
+            <AdSense client="ca-pub-4481504048762478" slot="3937695569" />
+        </>
     );
 };
 
