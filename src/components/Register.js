@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { registerAsync } from './loginSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AdSense from './AdSense';
 import {
     Box,
     Button,
