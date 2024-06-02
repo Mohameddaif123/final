@@ -19,8 +19,8 @@ const AdSense = ({ client, slot }) => {
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client={client}
-        data-ad-slot={slot}
+        data-ad-client={ca-pub-4481504048762478}
+        data-ad-slot={3937695569}
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
