@@ -48,7 +48,7 @@ const EmailForm = () => {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/api/users'); // Assuming your backend server is running on the same host
+            const response = await axios.get('https://cats-dogs-petstore.onrender.com/api/users'); // Assuming your backend server is running on the same host
             setUsers(response.data.users);
         } catch (error) {
             console.error('Error fetching users:', error);
