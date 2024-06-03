@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
+import PropTypes from 'prop-types';
 import Pay from './Paypal';
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -8,7 +8,6 @@ import {
     Button,
     Container,
     CssBaseline,
-    MenuItem,
     TextField,
     Typography,
     createTheme,
@@ -17,6 +16,7 @@ import {
     ListItem,
     ListItemText,
     ListItemSecondaryAction,
+    Rating,
 } from '@mui/material';
 import { Pets as PetsIcon } from '@mui/icons-material';
 
@@ -24,24 +24,24 @@ const petTheme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#ff4081', // A playful pink color
+            main: '#ff4081',
         },
         secondary: {
-            main: '#c6ff00', // A playful green color
+            main: '#c6ff00',
         },
         background: {
-            default: '#303030', // Dark background
-            paper: '#424242', // Dark paper background
+            default: '#303030',
+            paper: '#424242',
         },
         text: {
-            primary: '#ffffff', // White text
-            secondary: '#c6ff00', // Playful green text
+            primary: '#ffffff',
+            secondary: '#c6ff00',
         },
     },
     typography: {
-        fontFamily: 'Comic Sans MS, cursive, sans-serif', // Playful font
+        fontFamily: 'Comic Sans MS, cursive, sans-serif',
         h5: {
-            fontFamily: 'Papyrus, fantasy, serif', // Even more playful for headings
+            fontFamily: 'Papyrus, fantasy, serif',
         },
     },
 });
@@ -50,17 +50,14 @@ const Checkout = ({ cartItems }) => {
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState("");
 
-    // Function to calculate total price for an item
     const calculateTotalPrice = (item) => {
         return item.price * item.quantity;
     };
 
-    // Calculate overall total price of all items in cart
     const overallTotalPrice = cartItems.reduce((acc, item) => {
         return acc + calculateTotalPrice(item);
     }, 0);
 
-    // Convert overallTotalPrice to string with 2 decimal places
     const formattedTotalPrice = overallTotalPrice.toFixed(2);
 
     const handleSubmitReview = async (e) => {
@@ -126,22 +123,13 @@ const Checkout = ({ cartItems }) => {
                     <Box className="col-md-5 col-lg-4">
                         <Typography variant="h4" sx={{ mb: 3 }}>Leave a Review</Typography>
                         <form onSubmit={handleSubmitReview}>
-                            <TextField
-                                select
-                                label="Rating"
+                            <Typography component="legend">Rating</Typography>
+                            <Rating
+                                name="rating"
                                 value={rating}
-                                onChange={(e) => setRating(e.target.value)}
-                                fullWidth
+                                onChange={(event, newValue) => setRating(newValue)}
                                 required
-                                margin="normal"
-                            >
-                                <MenuItem value=""><em>Select a rating</em></MenuItem>
-                                <MenuItem value="1">1 - Worst</MenuItem>
-                                <MenuItem value="2">2</MenuItem>
-                                <MenuItem value="3">3</MenuItem>
-                                <MenuItem value="4">4</MenuItem>
-                                <MenuItem value="5">5 - Best</MenuItem>
-                            </TextField>
+                            />
                             <TextField
                                 label="Comment"
                                 value={comment}
@@ -164,7 +152,8 @@ const Checkout = ({ cartItems }) => {
 };
 
 Checkout.propTypes = {
-    cartItems: PropTypes.array.isRequired, // Validate cartItems prop as an array
+    cartItems: PropTypes.array.isRequired,
 };
 
 export default Checkout;
+
